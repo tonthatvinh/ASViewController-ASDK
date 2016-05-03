@@ -21,12 +21,11 @@ class DetailRootNode : ASDisplayNode {
         self.collectionNode = ASCollectionNode(collectionViewLayout: UICollectionViewFlowLayout())
         
         super.init()
-        self.addSubnode(self.collectionNode)
         
         self.collectionNode.delegate = self
         self.collectionNode.dataSource = self
         self.collectionNode.backgroundColor = UIColor.whiteColor()
-        
+        self.usesImplicitHierarchyManagement = true
     }
     
     deinit {
