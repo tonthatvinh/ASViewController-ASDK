@@ -45,7 +45,7 @@ extension DetailRootNode : ASCollectionDelegate {
 
 extension DetailRootNode : ASCollectionDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10;
+        return 10
     }
     
     func collectionView(collectionView: ASCollectionView, nodeForItemAtIndexPath indexPath: NSIndexPath) -> ASCellNode {

@@ -21,7 +21,6 @@ class ViewController: ASViewController {
         imageCategories = ["abstract", "animals", "business", "cats", "city", "food", "nightlife", "fashion", "people", "nature", "sports", "technics", "transport"]
         
         super.init(node: ASTableNode())
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -44,7 +43,9 @@ class ViewController: ASViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        
+        if let selectedRow = self.tableNode.view.indexPathForSelectedRow {
+            self.tableNode.view.deselectRowAtIndexPath(selectedRow, animated: true)
+        }
     }
 }
 
